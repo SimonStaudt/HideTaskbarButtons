@@ -5,8 +5,19 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:HideTaskbarButtons"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="289">
     <Grid>
-        
+        <Button Click="btnShowHidePrimaryTaskbar_Click" x:Name="btnShowHidePrimaryTaskbar" Content="Show Primary Taskbar" VerticalAlignment="Top"  MinWidth="125" Margin="20,20,20,0" HorizontalAlignment="Stretch"/>
+        <StackPanel HorizontalAlignment="Left" Height="310" Margin="20,55,0,0" VerticalAlignment="Top" Width="{Binding ElementName=btnShowHidePrimaryTaskbar, Path=ActualWidth}">
+            <TextBlock IsEnabled="False" Background="Transparent" Text="Primary Taskbar" FontWeight="Bold" TextDecorations="Underline" TextAlignment="Center" Height="25"/>
+            <CheckBox Tag="0" Checked="ShowPrimaryStartBtn" Unchecked="HidePrimaryStartBtn" Content="Start Button" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <CheckBox Tag="0" Click="SearchBtn" Content="Search Button" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <CheckBox Tag="0" Click="CortanaBtn" Content="Cortana Button" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <CheckBox Tag="0" Click="TaskviewBtn" Content="Taskview Button" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <CheckBox Tag="0" Click="ContactsBtn" Content="Contacts Button" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <CheckBox Tag="0" Click="NewsBtn" Content="News Button" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        </StackPanel>
+        <Button Click="About_Click" HorizontalAlignment="Right" VerticalAlignment="Bottom" Content="About" Width="75"/>
+
     </Grid>
 </Window>
